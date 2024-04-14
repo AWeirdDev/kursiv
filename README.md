@@ -1,36 +1,10 @@
 # Kursiv
 
-Python in your control.
-
-<br />
-
-`main.py`
+The Pygments alternative. Based on Rust.
 
 ```python
-import kursiv
+from kursiv import highlight
 
-# Create a box
-box = kursiv.Box(
-  allow_imports=[],  # Allow NO packages/modules
-  disallow_nodes=["def"]  # Allow NO functions
-)
-
-# (1) Run the box from a script file
-box.run("script.py")
-
-# (2) ...or from a code string
-box.run("""foo()""")
+h = highlight("print('hello, world!')")
+print(h)
 ```
-
-<br />
-
-`script.py`
-
-```python
-print("Hello, World!")
-
-# Uncomment and see error
-# def hello():
-#   print("panik!")
-```
-
