@@ -1,21 +1,29 @@
 # Kursiv
 
-The Pygments alternative. Based on Rust.
+Python for the component era.
 
-```python
-from kursiv import highlight
+> Coming Soon. The AST parser is halfway there!
 
-h = highlight("print('hello, world!')")
-print(h)
+<br />
+
+`main.ksv`
+```jsx
+hello = "world"
+
+def App():
+  return (
+    <>
+      <p>Check out this dataframe and array.</p>
+      <code>{df.head()}</code>
+      <code>{numpy.array([1., 2,, 3.])}</code>
+    </>
+  )
 ```
 
-## API <kbd>dev</kbd>
-API Documentation.
-
-### <kbd>def</kbd> api.parse
+## Use the AST
 
 ```python
-parse(code: str)
+>>> import kursiv
+>>> kursiv.parse("100, my_var")
+[Token::Int { value: 100 }, Token::Identifier { id: "my_var" }]
 ```
-
-Parse the code with Rust-based AST.
