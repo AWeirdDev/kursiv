@@ -15,14 +15,13 @@ Python for the component era.
       <th>
         Transformed (Edge 🏔️)
       </th>
-      <th>
-        Transformed (AST)
-      </th>
     </tr>
   </thead>
   <tbody>
     <tr>
 <td>
+
+The Kursiv syntax is easy to read and is really similar to JSX.<br />It's Python for the frontend.
 
 `main.ksv`
 ```jsx
@@ -41,6 +40,9 @@ def App():
 </td>
 <td>
 
+Kursiv is a Python (language) variant, not a runtime.<br />
+Convert it to **Edge 🏔️** to use from anywhere.
+
 `transformed_edge.py`
 ```python
 # ;__k94hpi=FRAGMENT,__1c2fgp=HTML,NOIMPORT
@@ -53,28 +55,6 @@ def App():
       __1c2fgp("code")(numpy.array([1.0, 2.0, 3.0]))
     )
   )
-```
-
-</td>
-<td>
-
-`transformed_ast.rs`
-```rs
-[
-  …,
-  Function {
-    id: "App",
-    block: Block {
-      tokens: [
-        Return {
-          tokens: [
-            Kursiv { .. },
-          ],
-        },
-      ],
-    },
-  },
-]
 ```
 
 </td>
